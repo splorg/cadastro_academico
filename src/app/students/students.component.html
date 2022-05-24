@@ -1,0 +1,16 @@
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Estudante</th>
+        <th>Idade</th>
+        <th>Curso</th>
+        <th>Semestre</th>
+    </tr>
+    <tr *ngFor="let student of student">
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.age}}</td>
+        <td>{{student.course}}</td>
+        <!-- <td>{{student.semester}}</td> -->
+    </tr>
+</table>
