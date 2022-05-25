@@ -1,0 +1,20 @@
+<div *ngIf="student">
+
+    <label for="id">ID do aluno:</label>
+    <input id="id" [(ngModel)]="student.id" placeholder="ID">
+
+    <label for="name">Nome do aluno:</label>
+    <input id="name" [(ngModel)]="student.name" placeholder="Nome">
+
+    <label for="age">Idade do aluno:</label>
+    <input id="age" [(ngModel)]="student.age" placeholder="Idade">
+
+    <label for="course">Curso matriculado:</label>
+    <input id="course" [(ngModel)]="student.course" placeholder="Curso">
+
+    <label for="semester">Semestre em andamento:</label>
+    <input id="semester" [(ngModel)]="student.semester" placeholder="Semestre">
+
+    <button type="button" (click)="goBack()">Voltar</button>
+
+</div>

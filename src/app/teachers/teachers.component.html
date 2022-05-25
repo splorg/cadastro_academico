@@ -1,0 +1,20 @@
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Professor</th>
+        <th>Disciplina</th>
+        <th>Editar</th>
+    </tr>
+    <tr *ngFor="let teacher of teachers">
+        <td>{{teacher.id}}</td>
+        <td>{{teacher.name}}</td>
+        <td>{{teacher.class}}</td>
+        <td>
+            <a routerLink="/professor/{{teacher.id}}">
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+            </a>
+        </td>
+    </tr>
+</table>

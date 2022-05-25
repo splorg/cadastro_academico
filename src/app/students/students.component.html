@@ -5,12 +5,20 @@
         <th>Idade</th>
         <th>Curso</th>
         <th>Semestre</th>
+        <th>Editar</th>
     </tr>
-    <tr *ngFor="let student of student">
+    <tr *ngFor="let student of students">
         <td>{{student.id}}</td>
         <td>{{student.name}}</td>
-        <td>{{student.age}}</td>
+        <td>{{student.age}} anos</td>
         <td>{{student.course}}</td>
-        <td>{{student.semester}}</td>
+        <td>{{student.semester}}º</td>
+        <td>
+            <a routerLink="/estudante/{{student.id}}">
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+            </a>
+        </td>
     </tr>
 </table>

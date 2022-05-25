@@ -1,0 +1,14 @@
+<div *ngIf="teacher">
+
+    <label for="id">ID do professor:</label>
+    <input id="id" [(ngModel)]="teacher.id" placeholder="ID">
+
+    <label for="name">Nome do professor:</label>
+    <input id="name" [(ngModel)]="teacher.name" placeholder="Nome">
+
+    <label for="class">Disciplina lecionada:</label>
+    <input id="class" [(ngModel)]="teacher.class" placeholder="Disciplina">
+
+    <button type="button" (click)="goBack()">Voltar</button>
+
+</div>

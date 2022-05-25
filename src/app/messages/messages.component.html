@@ -1,0 +1,13 @@
+<div *ngIf="messageService.messages.length">
+
+    <h2>Log</h2>
+
+    <button type="button" class="clear" (click)="messageService.clear()">
+        <span class="material-symbols-outlined">
+            delete_forever
+        </span>
+    </button>
+
+    <div *ngFor="let message of messageService.messages">{{message}}</div>
+
+</div>
