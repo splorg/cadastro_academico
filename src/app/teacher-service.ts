@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Teacher } from './teacher';
-import { TEACHERS } from './mock-teachers';
-import { Observable, of, TeardownLogic } from 'rxjs';
+import { TEACHERS } from './mock-api';
+import { Observable, of } from 'rxjs';
 import { MessageService } from './message.service';
 
 @Injectable({
