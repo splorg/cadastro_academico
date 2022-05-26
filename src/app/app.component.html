@@ -1,8 +1,37 @@
-<h1>Cadastro Acadêmico</h1>
-<nav>
-    <a routerLink="/home">Home</a>
-    <a routerLink="/estudantes">Estudantes</a>
-    <a routerLink="/professores">Professores</a>
-</nav>
+<header>
+
+    <div class="banner">
+
+        <div class="text">
+
+            <h1 class="title">Cadastro Acadêmico
+                <span class="material-symbols-outlined" id="icon">
+                    school
+                </span>
+            </h1>
+
+            <div class="collegeName">
+                <p>FATEC Itu - Dom Amaury Castanho
+                    
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <nav>
+
+        <ul>
+            <li><a routerLink="/home">Home</a></li>
+            <li><a routerLink="/estudantes">Estudantes</a></li>
+            <li><a routerLink="/professores">Professores</a></li>
+        </ul>
+
+    </nav>
+
+</header>
+
 <router-outlet></router-outlet>
+
 <app-messages></app-messages>

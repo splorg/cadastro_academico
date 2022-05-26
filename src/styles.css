@@ -1,0 +1,28 @@
+:root {
+    /* --font: 'Poppins', sans-serif; */
+    --font: 'Roboto', sans-serif;
+
+    --primary-color: #3d5afe;
+    --primary-light: #8187ff;
+    --primary-dark: #0031ca;
+
+    font-size: 62.5%;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    font-size: 1.6rem;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    text-align: center;
+}
