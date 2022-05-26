@@ -1,12 +1,18 @@
-header {
+/* header {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     width: 100%;
-    background-color: red;
+    height: 35%;
+    background-image: url('../assets/banner.png');
+    background-repeat: no-repeat;
+    background-position: center 20%;
+    background-size: cover;
+    justify-content: space-between;
 }
 
 header .banner {
+    margin: 5rem;
     padding: 3rem 2rem;
 }
 
@@ -44,38 +50,43 @@ header .text .collegeName p {
 }
 
 nav {
-    display: flex;
     flex: 1;
-    align-self: center;
     width: 100%;
+    align-self: center;
+    max-height: 6vh;
     max-width: 90rem;
-    background-color: hsl(0, 0%, 75%);
+    background-color: #df0c0c
 }
 
 nav ul {
     display: flex;
+    height: 100%;
     flex: 1;
     justify-content: space-evenly;
-    color: black;
     list-style: none;
 }
 
-nav ul li {
-    text-align: center;
-}
-
-nav ul li:hover {
-    background-color: hsl(0, 0%, 45%);
-}
-
-nav ul li a {
+.nav-link {
     display: inline-block;
+    color: #ffffff !important;
     font-size: 1.8rem;
     font-weight: 700;
     text-decoration: none;
     padding: 1.6rem;
 }
 
-nav ul li a:visited {
+.nav-link:hover {
+    color: #000000 !important;
+}
+
+.nav-link:visited {
     color: inherit;
 }
+
+@media screen and (max-width: 600px) {
+
+    header  {
+        padding: 1rem;
+    }
+    
+} */
