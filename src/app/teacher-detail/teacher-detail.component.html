@@ -1,14 +1,24 @@
-<div *ngIf="teacher">
+<div class="content" *ngIf="teacher">
 
-    <label for="id">ID do professor:</label>
-    <input id="id" [(ngModel)]="teacher.id" placeholder="ID">
+    <div class="input">
+        <label for="id">ID do professor:</label>
+        <input id="id" [(ngModel)]="teacher.id" placeholder="ID">
+    </div>
 
-    <label for="name">Nome do professor:</label>
-    <input id="name" [(ngModel)]="teacher.name" placeholder="Nome">
+    <div class="input">
+        <label for="name">Nome do professor:</label>
+        <input id="name" [(ngModel)]="teacher.name" placeholder="Nome">
+    </div>
 
-    <label for="class">Disciplina lecionada:</label>
-    <input id="class" [(ngModel)]="teacher.class" placeholder="Disciplina">
+    <div class="input">
+        <label for="class">Disciplina lecionada:</label>
+        <input id="class" [(ngModel)]="teacher.class" placeholder="Disciplina">
+    </div>
 
-    <button type="button" (click)="goBack()">Voltar</button>
+    <button type="button" (click)="goBack()">
+        <span class="material-symbols-outlined">
+            arrow_back
+        </span>
+    </button>
 
 </div>

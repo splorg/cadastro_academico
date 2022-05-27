@@ -1,0 +1,53 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 70vh;
+    margin: 2rem auto;
+}
+
+.content .input {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .15);
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+.content .input label {
+    background-color: brown;
+    color: white;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.content .input input {
+    padding: 1rem;
+    border-radius: 0 0 1rem 1rem;
+    border: none;
+}
+
+.content .input input:focus {
+    outline: none;
+}
+
+.content button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    margin-top: 1rem;
+    max-width: fit-content;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .15);
+}
+
+.content button:hover {
+    cursor: pointer;
+    background-color: black;
+    transition: background 300ms;
+}

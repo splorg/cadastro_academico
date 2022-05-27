@@ -1,13 +1,15 @@
-<div *ngIf="messageService.messages.length">
+<div class="content" *ngIf="messageService.messages.length">
 
-    <h2>Log</h2>
+    <div class="title">
+        <h2>Log 
+            <button type="button" (click)="messageService.clear()">
+                <span class="material-symbols-outlined">
+                    delete_forever
+                </span>
+            </button>
+        </h2>
+    </div>
 
-    <button type="button" class="clear" (click)="messageService.clear()">
-        <span class="material-symbols-outlined">
-            delete_forever
-        </span>
-    </button>
-
-    <div *ngFor="let message of messageService.messages">{{message}}</div>
+    <div class="log" *ngFor="let message of messageService.messages">{{message}}</div>
 
 </div>

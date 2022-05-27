@@ -1,0 +1,47 @@
+#wrapper {
+    overflow-x: auto;
+    margin: 1rem;
+}
+
+.content {
+    border-collapse: collapse;
+    font-size: 1.4rem;
+    width: 120rem;
+    max-width: 90vh;
+    margin: 0 auto;
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .15);
+    overflow: hidden;
+}
+
+.content tr {
+    border-bottom: 2px solid #dddddd;
+}
+
+.content tr:not(:nth-of-type(even)) {
+    background-color: #dddddd80;
+}
+
+.content tr:last-of-type {
+    border-bottom: 3px solid brown;
+}
+
+.content tr th {
+    background-color: brown;
+    color: white;
+    font-weight: 700;
+}
+
+.content th,
+.content td {
+    padding: 1.2rem 1.5rem;
+}
+
+.content td a {
+    color: brown;
+}
+
+.content td a:hover {
+    color: #000000;
+    transition: color 200ms;
+}

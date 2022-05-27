@@ -1,6 +1,6 @@
 :root {
-    /* --font: 'Poppins', sans-serif; */
-    --font: 'Roboto', sans-serif;
+    /* --font: 'Roboto', sans-serif; */
+    --font: 'Quicksand', sans-serif;
 
     --primary-color: #3d5afe;
     --primary-light: #8187ff;
@@ -25,4 +25,5 @@ html, body {
 
 body {
     text-align: center;
+    background-color: #f2f2f2;
 }
