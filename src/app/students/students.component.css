@@ -1,5 +1,6 @@
 #wrapper {
     overflow-x: auto;
+    margin: 1rem;
 }
 
 .content {
@@ -18,7 +19,6 @@
 }
 
 .content tr:not(:nth-of-type(even)) {
-    /* background-color: #f3f3f3; */
     background-color: #dddddd80;
 }
 
