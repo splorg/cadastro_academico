@@ -1,3 +1,3 @@
 # Cadastro Acadêmico
-Single Page Application que mostra estudantes e professores de uma faculdade e permite editá-los, com dados retornados de uma mock API.
-<br><br>Desenvolvido com Angular 13.
+Single Page Application para o cadastro de estudantes e professores em uma faculdade.
+<br><br>Desenvolvido com Angular 13 e utilizando JSON Server.
