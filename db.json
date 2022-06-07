@@ -1,0 +1,46 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Zezinho",
+      "age": 19,
+      "course": "Análise e Desenvolvimento de Sistemas",
+      "semester": 3
+    },
+    {
+      "id": 2,
+      "name": "Luisinho",
+      "age": 18,
+      "course": "Gestão de Tecnologia da Informação",
+      "semester": 1
+    },
+    {
+      "id": 3,
+      "name": "Miguelito",
+      "age": 19,
+      "course": "Mecatrônica",
+      "semester": 6
+    },
+    {
+      "name": "AHAHHAHAHAH",
+      "id": 4
+    }
+  ],
+  "teachers": [
+    {
+      "id": 1,
+      "name": "Chico",
+      "class": "Estatística"
+    },
+    {
+      "id": 2,
+      "name": "Glauco",
+      "class": "Eletiva Web"
+    },
+    {
+      "id": 3,
+      "name": "Margarida",
+      "class": "Programação Linear"
+    }
+  ]
+}

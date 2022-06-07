@@ -39,4 +39,13 @@ export class StudentDetailComponent implements OnInit {
 
   }
 
+  save(): void {
+
+    if (this.student) {
+      this.studentService.updateStudent(this.student)
+      .subscribe(() => this.goBack())
+    }
+
+  }
+
 }
