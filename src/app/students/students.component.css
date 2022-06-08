@@ -3,6 +3,26 @@
     margin: 1rem;
 }
 
+#wrapper button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    margin: 0 auto;
+    max-width: fit-content;
+    background-color: brown;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .15);
+    transition: background 300ms;
+}
+
+#wrapper button:hover {
+    cursor: pointer;
+    background-color: black;
+}
 .content {
     border-collapse: collapse;
     font-size: 1.4rem;
@@ -39,9 +59,64 @@
 
 .content td a {
     color: brown;
+    transition: color 200ms;
 }
 
 .content td a:hover {
+    cursor: pointer;
     color: #000000;
-    transition: color 200ms;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 85vh;
+    margin: 2rem auto;
+}
+
+.form .input {
+    display: flex;
+    flex-direction: column;
+    margin: auto 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .15);
+    border-radius: 1rem;
+    overflow: hidden;
+    border-collapse: collapse;
+}
+
+.form .input label {
+    background-color: brown;
+    color: white;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.form .input input {
+    padding: 1rem;
+    border: none;
+}
+
+.form .input input:focus {
+    outline: none;
+}
+
+.form button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    margin: 1rem;
+    max-width: fit-content;
+    background-color: brown;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: 0 0 2rem rgba(0, 0, 0, .15);
+    transition: background 300ms;
+}
+
+.form button:hover {
+    cursor: pointer;
+    background-color: black;
 }

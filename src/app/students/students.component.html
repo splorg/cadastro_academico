@@ -1,5 +1,7 @@
 <div id="wrapper">
 
+    <button (click)="add_student.toggle()">Adicionar estudante</button>
+
     <table class="content">
         <tr>
             <th>ID</th>
@@ -8,6 +10,7 @@
             <th>Curso</th>
             <th>Semestre</th>
             <th>Editar</th>
+            <th>Remover</th>
         </tr>
         <tr *ngFor="let student of students">
             <td>{{student.id}}</td>
@@ -22,12 +25,46 @@
                     </span>
                 </a>
             </td>
+            <td>
+                <a (click)="delete(student)">
+                    <span class="material-symbols-outlined">
+                        delete_forever
+                    </span>
+                </a>
+            </td>
         </tr>
     </table>
 
-    <button (click)="modal.toggle()">Adicionar estudante</button>
 </div>
 
-<app-modal #modal>
-FAAAAAALA HAHAHAHAHAH
+<app-modal #add_student>
+    
+    <form class="form">
+        <div class="input">
+            <label for="studentName">Nome do aluno:</label>
+            <input id="studentName" placeholder="Nome" #studentName>
+        </div>
+
+        <div class="input">
+            <label for="studentAge">Idade do aluno:</label>
+            <input id="studentAge" placeholder="Idade" #studentAge>
+        </div>
+
+        <div class="input">
+            <label for="studentCourse">Curso matriculado:</label>
+            <input id="studentCourse" placeholder="Curso" #studentCourse>
+        </div>
+
+        <div class="input">
+            <label for="studentSemester">Semestre cursando:</label>
+            <input id="studentSemester" placeholder="Semestre" #studentSemester>
+        </div>
+        
+        <button type="submit" (click)="add(studentName.value, studentAge.value, studentCourse.value, studentSemester.value); studentName.value=''; studentAge.value=''; studentCourse.value=''; studentSemester.value=''">
+            <span class="material-symbols-outlined">
+                add
+            </span>
+        </button>
+    </form>
+
 </app-modal>

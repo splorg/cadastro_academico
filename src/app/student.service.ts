@@ -59,6 +59,14 @@ export class StudentService {
     )
   }
 
+  deleteStudent(id: number): Observable<Student> {
+    const url = `${this.studentsUrl}/${id}`
+    return this.http.delete<Student>(url, this.httpOptions).pipe(
+      tap(_ => this.log(`deleted student ID = ${id}`)),
+      catchError(this.handleError<Student>('deleteStudent'))
+    )
+  }
+
   constructor(
     private messageService: MessageService,
     private http: HttpClient) { }

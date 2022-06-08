@@ -24,13 +24,21 @@ export class StudentsComponent implements OnInit {
       .subscribe(students => this.students = students)
   }
 
-  add(name: string): void {
+  add(name: string, age: any, course: string, semester: any): void {
+    parseInt(age)
+    parseInt(semester)
     name = name.trim()
-    if (!name) { return }
-    this.studentService.addStudent({ name } as Student)
+    course = course.trim()
+    if (!name || age < 1 || !course || semester < 1) { return }
+    this.studentService.addStudent({ name, age, course, semester } as unknown as Student)
     .subscribe(student => {
       this.students.push(student)
     })
+  }
+
+  delete(student: Student): void {
+    this.students = this.students.filter(s => s !== student)
+    this.studentService.deleteStudent(student.id).subscribe()
   }
 
 }

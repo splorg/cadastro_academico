@@ -44,10 +44,10 @@
     border: none;
     border-radius: 1rem;
     box-shadow: 0 0 2rem rgba(0, 0, 0, .15);
+    transition: background 300ms;
 }
 
 .content button:hover {
     cursor: pointer;
     background-color: black;
-    transition: background 300ms;
 }

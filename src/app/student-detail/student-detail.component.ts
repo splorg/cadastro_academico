@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Student } from '../student'
 import { StudentService } from '../student.service';
+import { ModalModule } from '../modal/modal.module';
 
 @Component({
   selector: 'app-student-detail',
