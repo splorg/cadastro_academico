@@ -4,25 +4,32 @@
       "name": "Teste da Silva Jr.",
       "age": "19",
       "course": "Mecatrônica",
-      "semester": "3",
+      "semester": "5",
       "id": 1
+    },
+    {
+      "name": "boa tarde",
+      "age": "41",
+      "course": "ADS",
+      "semester": "3",
+      "id": 2
     }
   ],
   "teachers": [
     {
-      "id": 1,
-      "name": "Chico",
-      "class": "Estatística"
-    },
-    {
       "id": 2,
       "name": "Glauco",
-      "class": "Eletiva Web"
+      "subject": "Eletiva Web"
     },
     {
       "id": 3,
       "name": "Margarida",
-      "class": "Programação Linear"
+      "subject": "Programação Linear"
+    },
+    {
+      "name": "Ricardo Leme",
+      "subject": "Interação Humano-Computador",
+      "id": 4
     }
   ]
 }

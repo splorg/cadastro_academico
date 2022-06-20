@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Student } from '../student'
-import { StudentService } from '../student.service';
+import { DataService } from '../data.service';
 import { ModalModule } from '../modal/modal.module';
 
 @Component({
@@ -14,7 +14,7 @@ export class StudentDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private studentService: StudentService,
+    private dataService: DataService,
     private location: Location
   ) { }
 
@@ -29,7 +29,7 @@ export class StudentDetailComponent implements OnInit {
   getStudent(): void {
     
     const id = Number(this.route.snapshot.paramMap.get('id'))
-    this.studentService.getStudent(id)
+    this.dataService.getStudent(id)
       .subscribe(student => this.student = student)
 
   }
@@ -43,7 +43,7 @@ export class StudentDetailComponent implements OnInit {
   save(): void {
 
     if (this.student) {
-      this.studentService.updateStudent(this.student)
+      this.dataService.updateStudent(this.student)
       .subscribe(() => this.goBack())
     }
 

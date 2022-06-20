@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Teacher } from '../teacher';
-import { TeacherService } from '../teacher-service';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-teacher-detail',
@@ -13,7 +13,7 @@ export class TeacherDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private teacherService: TeacherService,
+    private dataService: DataService,
     private location: Location
   ) { }
 
@@ -28,15 +28,20 @@ export class TeacherDetailComponent implements OnInit {
   getTeacher(): void {
 
     const id = Number(this.route.snapshot.paramMap.get('id'))
-    this.teacherService.getTeacher(id)
+    this.dataService.getTeacher(id)
       .subscribe(teacher => this.teacher = teacher)
 
   }
 
   goBack(): void {
-
     this.location.back()
+  }
 
+  save(): void {
+    if (this.teacher) {
+      this.dataService.updateTeacher(this.teacher)
+      .subscribe(() => this.goBack())
+    }
   }
 
 }

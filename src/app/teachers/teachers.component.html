@@ -1,15 +1,19 @@
 <div id="wrapper">
+
+    <button (click)="add_teacher.toggle()">Adicionar professor</button>
+
     <table class="content">
         <tr>
             <th>ID</th>
             <th>Professor</th>
             <th>Disciplina</th>
             <th>Editar</th>
+            <th>Remover</th>
         </tr>
         <tr *ngFor="let teacher of teachers">
             <td>{{teacher.id}}</td>
             <td>{{teacher.name}}</td>
-            <td>{{teacher.class}}</td>
+            <td>{{teacher.subject}}</td>
             <td>
                 <a routerLink="/professor/{{teacher.id}}">
                     <span class="material-symbols-outlined">
@@ -17,6 +21,35 @@
                     </span>
                 </a>
             </td>
+            <td>
+                <a (click)="delete(teacher)">
+                    <span class="material-symbols-outlined">
+                        delete_forever
+                    </span>
+                </a>
+            </td>
         </tr>
     </table>
 </div>
+
+<app-modal #add_teacher>
+    
+    <form class="form">
+        <div class="input">
+            <label for="teacherName">Nome do professor:</label>
+            <input id="teacherName" placeholder="Nome" #teacherName>
+        </div>
+
+        <div class="input">
+            <label for="teacherSubject">Matéria(s) que leciona:</label>
+            <input id="teacherSubject" placeholder="Matéria(s)" #teacherSubject>
+        </div>
+        
+        <button type="submit" (click)="add(teacherName.value, teacherSubject.value); teacherName.value=''; teacherSubject.value=''">
+            <span class="material-symbols-outlined">
+                add
+            </span>
+        </button>
+    </form>
+
+</app-modal>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Student } from '../student'
-import { StudentService } from '../student.service';
+import { DataService } from '../data.service';
 import { MessageService } from '../message.service';
 import { ModalModule } from '../modal/modal.module';
 
@@ -13,14 +13,14 @@ export class StudentsComponent implements OnInit {
 
   students: Student[] = []
 
-  constructor(private studentService: StudentService) { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
     this.getStudents()
   }
   
   getStudents(): void {
-    this.studentService.getStudents()
+    this.dataService.getStudents()
       .subscribe(students => this.students = students)
   }
 
@@ -30,7 +30,7 @@ export class StudentsComponent implements OnInit {
     name = name.trim()
     course = course.trim()
     if (!name || age < 1 || !course || semester < 1) { return }
-    this.studentService.addStudent({ name, age, course, semester } as unknown as Student)
+    this.dataService.addStudent({ name, age, course, semester } as unknown as Student)
     .subscribe(student => {
       this.students.push(student)
     })
@@ -38,7 +38,7 @@ export class StudentsComponent implements OnInit {
 
   delete(student: Student): void {
     this.students = this.students.filter(s => s !== student)
-    this.studentService.deleteStudent(student.id).subscribe()
+    this.dataService.deleteStudent(student.id).subscribe()
   }
 
 }

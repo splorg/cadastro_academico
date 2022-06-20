@@ -12,12 +12,18 @@
 
     <div class="input">
         <label for="class">Disciplina lecionada:</label>
-        <input id="class" [(ngModel)]="teacher.class" placeholder="Disciplina">
+        <input id="class" [(ngModel)]="teacher.subject" placeholder="Disciplina">
     </div>
 
     <button type="button" (click)="goBack()">
         <span class="material-symbols-outlined">
             arrow_back
+        </span>
+    </button>
+
+    <button type="button" (click)="save()">
+        <span class="material-symbols-outlined">
+            check
         </span>
     </button>
 
